@@ -1,4 +1,11 @@
-﻿-- *******************************************************
+﻿-- Fecha: 24 de abril de 2017
+-- Servidor: LINUX CENTOS 7
+-- Versión de PHP: 5.4.16 
+-- Base de datos: PostgreSQL version 9.4.7 nombre=DIP
+-- Programadora: Diana Carolina Chacón López 
+
+
+-- *******************************************************
 -- INSTRUCCIONES PARA BORRAR LAS TABLAS                  *
 -- *******************************************************
 DROP TABLE tab_significado;
@@ -171,6 +178,8 @@ INSERT INTO tab_usuario (id_usuario,nom_usuario,apell_usuario,celular,correo_ele
 -- *******************************************************************************
 -- FUNCIÓN PARA REALIZAR EL PRIMER JUEGO DE DIP **********************************
 -- *******************************************************************************
+-- Se requiere que primero se haya insertado un concepto para que se pueda implementar
+
 DROP FUNCTION fun_test(diccionario_seleccionado integer, usuario bigint);
 CREATE OR REPLACE FUNCTION fun_test(diccionario_seleccionado integer, usuario bigint)
   RETURNS character varying AS
